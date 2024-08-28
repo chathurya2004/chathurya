@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+CART PAGE
+</head>
+<style>
+div{
+height:200px;
+width:200px;
+font-family:'Times New Roman' ,times ,serif;
+font-weight:10px;
+font-style:italic;
+margin:top,
+text-align:center;
+}
+</style>
+
+
+<body>
+<div>
+<label for="productid">PRODUCTID</label>
+<input type="text" id="productid" name="productid"></input><br>
+
+<label for="productname">PRODUCTNAME</label>
+<input type="text" id="productname" name="productname"></input><br>
+<label for="productquantity">PRODUCTQUANTITY</label>
+<input type="text" id="productquantity" name="productquantity"></input><br>
+
+<button type="SUBMIT" onclick="validate(callback)">SUBMIT</button>
+</div>
+
+</body>
+<script>
+	function validate(callback){
+		if(productname==='KURTISET' && productquantity==='8'){
+			callback(false);
+		}
+		else{
+			callback(true);
+		}
+	}
+	
+	function callback(success){
+		if(success)
+			alert('kurtas are only less than 8 available');
+		else
+			alert('kurtas are available');
+	}
+</script>
+</body>
+</html>
+
+			
